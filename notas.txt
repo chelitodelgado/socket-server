@@ -1,0 +1,2 @@
+1.- Ejecutar el servidor con "nodemon dist/" 
+    y e otra terminal ejecutar "tsc -w"
