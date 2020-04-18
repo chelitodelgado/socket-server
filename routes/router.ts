@@ -16,7 +16,7 @@ router.get('/mensajes', (req: Request, res: Response) => {
 router.post('/mensajes', (req: Request, res: Response) => {
 
     const cuerpo = req.body.cuerpo;
-    const de = req.body.de;
+    const de     = req.body.de;
 
     res.json({
         ok: true,
