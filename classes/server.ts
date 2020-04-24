@@ -43,11 +43,14 @@ export default class Server {
         this.io.on('connection', cliente => {
 
             // Conectar cleibte
-            socket.conectarCliente( cliente );
+            socket.conectarCliente( cliente, this.io );
 
 
             // Configurar usuario
             socket.configurarUsuario( cliente, this.io );
+
+            // Obtner usuarios activos
+            socket.obtenerUsuarios(cliente, this.io);
 
 
             // Mensaje
@@ -55,7 +58,7 @@ export default class Server {
 
 
             // Desconectar
-            socket.desconectar( cliente );
+            socket.desconectar( cliente, this.io );
 
 
         });
